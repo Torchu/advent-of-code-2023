@@ -1,4 +1,4 @@
-import { readLines } from "../utils/file-reader";
+import { main } from "../utils/main";
 
 const part1 = (input: string[]): number => {
   return input.reduce((acc: number, line: string) => {
@@ -73,8 +73,4 @@ const stringToInt = (input: string): number => {
 
 const reverseString = (str: string) => str.split("").reverse().join("");
 
-const inputFilePath = process.argv[2];
-const input = await readLines(inputFilePath);
-
-console.log("Part 1: ", part1(input));
-console.log("Part 2: ", part2(input));
+main(part1, part2);
